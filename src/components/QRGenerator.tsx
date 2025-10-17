@@ -10,7 +10,6 @@ import { toast } from "sonner";
 export const QRGenerator = () => {
   const [inputValue, setInputValue] = useState("");
   const [qrValue, setQrValue] = useState("");
-  const [qrSize, setQrSize] = useState(256);
 
   const generateQR = () => {
     if (!inputValue.trim()) {
@@ -35,8 +34,8 @@ export const QRGenerator = () => {
     const ctx = canvas.getContext("2d");
     const img = new Image();
 
-    canvas.width = qrSize;
-    canvas.height = qrSize;
+    canvas.width = 256;
+    canvas.height = 256;
 
     img.onload = () => {
       ctx?.drawImage(img, 0, 0);
@@ -44,8 +43,10 @@ export const QRGenerator = () => {
         if (blob) {
           const url = URL.createObjectURL(blob);
           const link = document.createElement("a");
+          const label = inputValue.substring(0, 20); // Use first 20 chars of input as label
+          const fileName = `ivanqr-${label || 'code'}-${new Date().toISOString().replace(/[:.]/g, '-')}.png`;
           link.href = url;
-          link.download = "qrcode.png";
+          link.download = fileName;
           link.click();
           URL.revokeObjectURL(url);
           toast.success("QR Code downloaded!");
@@ -96,20 +97,6 @@ export const QRGenerator = () => {
                 />
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="size">QR Code Size: {qrSize}px</Label>
-                <input
-                  id="size"
-                  type="range"
-                  min="128"
-                  max="512"
-                  step="64"
-                  value={qrSize}
-                  onChange={(e) => setQrSize(Number(e.target.value))}
-                  className="w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary"
-                />
-              </div>
-
               <div className="flex gap-3">
                 <Button 
                   onClick={generateQR} 
@@ -141,7 +128,7 @@ export const QRGenerator = () => {
                     <QRCodeSVG
                       id="qr-code-svg"
                       value={qrValue}
-                      size={qrSize}
+                      size={256}
                       level="H"
                       includeMargin
                     />
