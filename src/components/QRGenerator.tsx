@@ -71,7 +71,7 @@ export const QRGenerator = () => {
             <QrCode className="w-8 h-8 text-primary-foreground" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-            IvanQR
+            Quickode
           </h1>
           <p className="text-muted-foreground text-lg">
             Create professional QR codes instantly
