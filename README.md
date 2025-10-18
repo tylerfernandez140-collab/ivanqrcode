@@ -5,7 +5,7 @@ It allows users to generate and download QR codes instantly — no login, no cos
 
 ## 🌐 Live Demo
 
-➡️ https://ivanqr.netlify.app
+➡️ https://quickode.netlify.app/
 
 ## ⚙️ Features
 
