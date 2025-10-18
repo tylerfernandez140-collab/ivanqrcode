@@ -46,8 +46,8 @@ export const IvanQRFooter = () => {
       {/* 🧾 Footer Credits */}
       <div className="text-gray-500 dark:text-gray-400 text-sm mt-8">
         <p>
-          © {new Date().getFullYear()} <span className="font-semibold">IvanQR</span> —
-          Built with 💙 by Ivan Creates.
+          © {new Date().getFullYear()} <span className="font-semibold">Quickode</span> —
+          Built with 💛 by Ivan Creates.
         </p>
         <p className="mt-1">
           Hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:underline">Netlify</a>
