@@ -36,7 +36,10 @@ export default defineConfig(({ mode }) => ({
             type: 'image/png'
           }
         ]
-      }
+      },
+      workbox: {
+        navigateFallbackDenylist: [/^\/\.map$/, /^\/_redirects$/, /^\/robots\.txt$/, /^\/sitemap\.xml$/],
+      },
     })
   ].filter(Boolean),
   resolve: {
