@@ -52,6 +52,10 @@ export const IvanQRFooter = () => {
         <p className="mt-1">
           Hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" className="text-indigo-500 hover:underline">Netlify</a>
         </p>
+        <p>Download our app today and experience the convenience of seamless QR code management!</p>
+        <p><a href="/privacy_policy.html" className="text-indigo-500 hover:underline">Privacy Policy</a></p>
+        <p>Get Quickode Scanner on <a href="https://ivancreates.itch.io/quickode-scanner" className="text-indigo-500 hover:underline">itch.io</a></p>
+        <p>Coming soon to other app stores!</p>
       </div>
     </footer>
   );

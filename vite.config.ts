@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => ({
     mode === "development" && componentTagger(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png', 'icons/*.png'],
       manifest: {
         name: 'QR Code Generator',
         short_name: 'QRApp',
@@ -40,7 +40,7 @@ export default defineConfig(({ mode }) => ({
       workbox: {
         navigateFallbackDenylist: [/^\/\.map$/, /^\/_redirects$/, /^\/robots\.txt$/, /^\/sitemap\.xml$/],
       },
-    })
+    }),
   ].filter(Boolean),
   resolve: {
     alias: {

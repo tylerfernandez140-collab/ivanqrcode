@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { IvanQRFooter } from "@/components/IvanQRFooter";
-import FooterContent from "@/components/FooterContent";
 
 const queryClient = new QueryClient();
 
@@ -15,10 +14,6 @@ const router = createBrowserRouter(
     {
       path: "/",
       element: <Index />,
-    },
-    {
-      path: "/footer-info",
-      element: <FooterContent />,
     },
     // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
     {
@@ -40,7 +35,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <div className="min-h-screen flex flex-col justify-between">
-        <main className="flex-grow">
+        <main className="flex-grow bg-blue-100 min-h-[500px]">
           <RouterProvider router={router} />
         </main>
         <IvanQRFooter />
