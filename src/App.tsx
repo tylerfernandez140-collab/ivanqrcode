@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { IvanQRFooter } from "@/components/IvanQRFooter";
+import FooterContent from "@/components/FooterContent";
 
 const queryClient = new QueryClient();
 
@@ -16,12 +17,8 @@ const router = createBrowserRouter(
       element: <Index />,
     },
     {
-      path: "/index.html",
-      element: <Index />,
-    },
-    {
-      path: "/privacy_policy.html",
-      element: <Index />,
+      path: "/footer-info",
+      element: <FooterContent />,
     },
     // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
     {
