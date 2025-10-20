@@ -15,6 +15,14 @@ const router = createBrowserRouter(
       path: "/",
       element: <Index />,
     },
+    {
+      path: "/index.html",
+      element: <Index />,
+    },
+    {
+      path: "/privacy_policy.html",
+      element: <Index />,
+    },
     // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
     {
       path: "*",
