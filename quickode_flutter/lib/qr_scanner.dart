@@ -1,0 +1,1 @@
+export 'package:quickode_scanner/screens/scanner_screen.dart';
